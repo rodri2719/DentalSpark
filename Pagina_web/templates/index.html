@@ -1,0 +1,72 @@
+$def with ()
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DentalSpark</title>
+  <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Dental Spark Logo" />
+      <span>DENTAL SPARK</span>
+    </div>
+    <nav>
+        <a href="/index.html">Inicio</a>
+        <a href="/recomendaciones.html">Recomendaciones</a>
+        <a href="/enfermedades.html">Enfermedades</a>
+        <a href="/juego.html">Juego</a>
+        <a href="/sobre_nosotros.html">Sobre nosotros</a>
+    </nav>
+    <div class="user">
+      <p>"Tu sonrisa es poder, ¡cuídala al crecer!"</p>
+      <a href="/perfil.html" class="perfil-link">
+        <img src="/static/perfil.jpg" />
+        <span>Perfil</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero con video -->
+  <section class="hero">
+    <video autoplay muted loop id="bg-video">
+      <source src="video.mp4" type="video/mp4" />
+      Tu navegador no soporta el video.
+    </video>
+    <div class="overlay">
+      <h1>DentalSpark</h1>
+      <button onclick="location.href='#'">JUGAR</button>
+    </div>
+  </section>
+
+  <!-- Info principal -->
+  <section class="info">
+    <h2>Todo hacerca de lo que devés saber</h2>
+  </section>
+
+  <!-- Testimonios -->
+  <section class="testimonios">
+    <div class="testimonio">
+      <p>This is your Testimonial quote.<br />Give your customers the stage to tell the world how great you are!</p>
+      <a href="#">Doc. Polo</a>
+    </div>
+    <div class="testimonio">
+      <p>This is your Testimonial quote.<br />Give your customers the stage to tell the world how great you are!</p>
+      <a href="#">Doc. Juan</a>
+    </div>
+    <div class="testimonio">
+      <p>This is your Testimonial quote.<br />Give your customers the stage to tell the world how great you are!</p>
+      <a href="#">Doc. maki gero</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <img src="logo.png" alt="Dental Spark Footer Logo" />
+    <p>© 2025 DentalSpark</p>
+  </footer>
+</body>
+</html>
