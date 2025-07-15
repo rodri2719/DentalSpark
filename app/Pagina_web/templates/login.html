@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DentalSpark</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="/static/li.png" alt="Dental Spark Logo" />
+      <span>DENTAL SPARK</span>
+    </div>
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="/recomendaciones.html">Recomendaciones</a>
+      <a href="/enfermedades.html">Enfermedades</a>
+      <a href="/juego.html">Juego</a>
+      <a href="/sobre_nosotros.html">Sobre nosotros</a>
+    </nav>
+    <div class="user">
+      <p>"Tu sonrisa es poder, ¡cuídala al crecer!"</p>
+      <a href="/perfil.html" class="perfil-link">
+        <img src="/static/perfil.jpg" alt="Perfil" />
+        <span>Perfil</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero con video -->
+  <section class="hero">
+    <video autoplay muted loop id="bg-video">
+      <source src="/static/juego.mp4" type="video/mp4" />
+      Tu navegador no soporta el video.
+    </video>
+    <div class="overlay">
+      <h1>DentalSpark</h1>
+      <p style="color:#1c68f5;font-size:1.3em;font-weight:bold;margin:20px 0;">¡Has sido redirigido correctamente!<br>Esta es la página de login.html</p>
+      <button onclick="location.href='/juego.html'">JUGAR</button>
+    </div>
+  </section>
+
+  <!-- Info principal -->
+  <section class="info">
+    <h2>Todo acerca de lo que debes saber</h2>
+  </section>
+
+  <!-- Sección de caries -->
+  <div class="caries-seccion">
+    <div class="caries-row">
+      <div class="caries-card contenido">
+        <h3>Lo que provoca las caries</h3>
+        <p>Conoce acerca de esto</p>
+        <button>Conocer</button>
+      </div>
+      <div class="caries-card">
+        <img src="/static/img1.png" alt="Diente con caries" class="caries-img" />
+      </div>
+    </div>
+
+    <div class="caries-row reverse">
+      <div class="caries-card">
+        <img src="/static/nino_cepillando.jpg" alt="Niño cepillando sus dientes" class="caries-img" />
+      </div>
+      <div class="caries-card contenido">
+        <h3>Cómo prevenirlas</h3>
+        <p>Hay muchas formas de prevenir las caries...</p>
+        <button>Conocer</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonios -->
+  <section class="testimonios">
+    <div class="testimonio">
+      <p>"Este es tu testimonio. Dale a tus clientes la oportunidad de decirle al mundo lo grandioso que eres."</p>
+      <a href="#">Doc. Polo</a>
+    </div>
+    <div class="testimonio">
+      <p>"Este es tu testimonio. Dale a tus clientes la oportunidad de decirle al mundo lo grandioso que eres."</p>
+      <a href="#">Doc. Juan</a>
+    </div>
+    <div class="testimonio">
+      <p>"Este es tu testimonio. Dale a tus clientes la oportunidad de decirle al mundo lo grandioso que eres."</p>
+      <a href="#">Doc. Maki Gero</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <img src="/static/li.png" alt="Dental Spark Footer Logo" />
+    <p>© 2025 DentalSpark</p>
+  </footer>
+</body>
+</html>

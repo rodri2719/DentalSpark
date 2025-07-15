@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2fdff;
+  color: #000;
+}
+
+/* Header */
+header {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+}
+
+nav a.active {
+  color: #1c68f5;
+  border-bottom: 2px solid #1c68f5;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: right;
+}
+
+.perfil-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.perfil-link img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+/* Hero */
+#bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay h1 {
+  font-size: 64px;
+  color: #00ced1;
+  font-style: italic;
+  text-shadow: 1px 1px #000;
+}
+
+.overlay button {
+  margin-top: 20px;
+  padding: 10px 30px;
+  font-size: 18px;
+  background-color: #d9f6fd;
+  border: none;
+  cursor: pointer;
+}
+
+/* Info */
+.info {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+
+/* Caries Sección */
+.caries-seccion {
+  background: #f0fbff;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-bottom: 60px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+/* Zigzag para caries */
+.caries-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  flex-direction: row;
+}
+.caries-row.reverse {
+  flex-direction: row-reverse;
+}
+.caries-card {
+  flex: 1 1 40%;
+  max-width: 500px;
+  background: linear-gradient(to bottom, #ffffff, #e9faff);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.caries-card.contenido {
+  align-items: flex-start;
+  text-align: left;
+}
+.caries-img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+@media (max-width: 900px) {
+  .caries-row, .caries-row.reverse {
+    flex-direction: column !important;
+    align-items: stretch;
+  }
+  .caries-card {
+    max-width: 100%;
+  }
+  .caries-card.contenido {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
+.caries-card h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.caries-card p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.caries-card button {
+  padding: 10px 25px;
+  background-color: #d4f6ff;
+  border: 1px solid #aaa;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Testimonios */
+.testimonios {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+  background: linear-gradient(to right, #c2f0ff, #e0f9ff);
+  margin-bottom: 60px;
+}
+
+.testimonio {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonio a {
+  text-decoration: underline;
+  color: black;
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #e5faff;
+  font-size: 14px;
+}
+
+footer img {
+  height: 40px;
+  margin-bottom: 10px;
+}
