@@ -5,8 +5,6 @@ import os
 urls = (
     '/', 'Index',
     '/login.html', 'Login',
-    '/registro.html', 'Registro',
-    '/logout', 'Logout',
     '/recomendaciones.html', 'Recomendaciones',
     '/enfermedades.html', 'Enfermedades',
     '/juego.html', 'Juego',
@@ -19,30 +17,13 @@ urls = (
 render = web.template.render('templates/')
 
 # ----------------------- Controladores de páginas -----------------------
-
 class Index:
     def GET(self):
         return render.index()
 
 class Login:
     def GET(self):
-        return render.login(msg="")
-    def POST(self):
-        # Deshabilitado: validación de base de datos
-        # Siempre redirige a login.html para pruebas visuales
-        raise web.seeother('/login.html')
-
-class Registro:
-    def GET(self):
-        return render.registro(msg="")
-    def POST(self):
-        # Lógica de registro eliminada
-        return render.registro(msg="Funcionalidad deshabilitada.")
-
-class Logout:
-    def GET(self):
-        web.setcookie('usuario', '', expires=-1)
-        raise web.seeother('/')
+        return render.login()
 
 class Recomendaciones:
     def GET(self):
@@ -68,25 +49,15 @@ class SobreNosotros:
 class Static:
     def GET(self, file):
         try:
+            if not file.endswith('.css'):
+                return web.notfound("Solo se permiten archivos CSS.")
             path = os.path.join('static', file)
-            ext = os.path.splitext(file)[1].lower()
-            content_types = {
-                '.css': 'text/css',
-                '.jpg': 'image/jpeg',
-                '.jpeg': 'image/jpeg',
-                '.png': 'image/png',
-                '.gif': 'image/gif',
-                '.mp4': 'video/mp4',
-                '.ico': 'image/x-icon',
-                '.svg': 'image/svg+xml',
-            }
-            content_type = content_types.get(ext, 'application/octet-stream')
             with open(path, 'rb') as f:
                 content = f.read()
-            web.header('Content-Type', content_type)
+            web.header('Content-Type', 'text/css')
             return content
         except FileNotFoundError:
-            return web.notfound("Archivo estático no encontrado.")
+            return web.notfound("Archivo CSS no encontrado.")
 
 # ----------------------- Ejecutar -----------------------
 if __name__ == "__main__":
