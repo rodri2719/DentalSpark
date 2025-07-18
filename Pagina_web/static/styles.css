@@ -351,3 +351,25 @@ footer img {
   height: 40px;
   margin-bottom: 10px;
 }
+
+.titulo-brillante {
+  font-size: 64px;
+  font-style: italic;
+  color: #00ced1;
+  text-shadow: 0 0 10px #1c68f5, 0 0 20px #1c68f5, 0 0 30px #1c68f5;
+  animation: glowPulse 2s ease-in-out infinite;
+  z-index: 2;
+  position: relative;
+}
+
+@keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 10px #1c68f5, 0 0 20px #1c68f5, 0 0 30px #1c68f5;
+  }
+  50% {
+    text-shadow: 0 0 20px #00ced1, 0 0 30px #00ced1, 0 0 40px #00ced1;
+  }
+  100% {
+    text-shadow: 0 0 10px #1c68f5, 0 0 20px #1c68f5, 0 0 30px #1c68f5;
+  }
+}
